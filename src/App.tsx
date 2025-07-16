@@ -15,7 +15,6 @@ import {
 const DAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
 const START_HOUR = 9;
 const END_HOUR = 18;
-const SLOT_DURATION = 30; // minutes
 
 function generateTimeSlots() {
     const slots: { day: number; time: string }[] = [];
@@ -29,7 +28,6 @@ function generateTimeSlots() {
     }
     return slots;
 }
-const timeSlots = generateTimeSlots();
 
 function App() {
     // Set default candidate to Arjun Krishna
@@ -151,13 +149,14 @@ function App() {
                                 <div className="calendar-time-cell">{label}</div>
                                 {DAYS.map((day, dayIdx) => {
                                     // dayIdx is 0=Mon, 1=Tue, ...
+                                    
                                     const iso = getSlotISO(dayIdx, label);
                                     const engineersHere = getEngineersForSlot(iso);
                                     const inCandidate = isInCandidateRange(dayIdx, label);
                                     return (
                                         <div
                                             className="calendar-slot-cell"
-                                            key={dayIdx}
+                                            key={day}
                                             style={{
                                                 background: isLocked(iso)
                                                     ? '#d3d3d3'
