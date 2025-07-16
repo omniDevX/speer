@@ -56,12 +56,6 @@ Deploy to Vercel, Netlify, or any static host. Example:
 - [x] README with design decisions
 - [x] Ready for deployment
 
-## Walkthrough Video
-_After deployment, record a walkthrough (max 5 min) showing:_
-- App functionality (live on deployed URL)
-- Explanation of important components and logic
-- Running the unit test(s)
-
 ---
 
-**For any questions, contact developer-at-speer.**
+**For any questions, contact me omnidevx@gmail.com.**
