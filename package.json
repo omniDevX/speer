@@ -1,0 +1,49 @@
+{
+  "name": "Intro to GraphQL with TypeScript",
+  "private": true,
+  "description": "The starter code for the Odyssey Intro to GraphQL with TypeScript course",
+  "version": "0.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apollographql-education/intro-typescript"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "engines": {
+    "node": ">=18.0"
+  },
+  "scripts": {
+    "compile": "tsc",
+    "dev": "ts-node-dev --respawn ./src/index.ts",
+    "start": "npm run compile && nodemon ./dist/index.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@parcel/watcher": "^2.4.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.0.3",
+    "@types/node": "^20.0.0",
+    "concurrently": "^8.2.2",
+    "jest": "^29.0.3",
+    "nodemon": "^3.0.0",
+    "ts-jest": "^29.0.2",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.0.0"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "roots": [
+      "src"
+    ],
+    "globals": {
+      "ts-jest": {
+        "testRegext": "/__tests__/.*.test.ts",
+        "verbose": true
+      }
+    }
+  }
+}
